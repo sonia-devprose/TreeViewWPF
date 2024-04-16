@@ -1,4 +1,4 @@
-# TreeViewWPF
+# Mini Inventory App using TreeView in WPF
 
 **Creating a WPF app in .NET6 using a TreeView UI**
 
