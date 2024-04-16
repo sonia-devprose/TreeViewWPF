@@ -64,3 +64,11 @@ Inside the \<Application.Resources\> section of App.xaml, add a
 Now that you have defined the custom styles in TreeViewStyles.xaml and
 referenced them in App.xaml, you can apply these styles to the TreeView
 and TreeViewItem in MainWindow.xaml.
+
+Some benefits of using the TreeView UI control:
+
+Hierarchical Representation
+Customization
+Smooth Scrolling
+Drag-and-Drop
+Data Binding
