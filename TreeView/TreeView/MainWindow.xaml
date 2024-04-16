@@ -1,0 +1,28 @@
+﻿<Window x:Class="TreeView.MainWindow"
+        xmlns:local="clr-namespace:TreeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Inventory TreeView" Height="450" Width="800">
+    <Grid>
+        <TreeView ItemsSource="{Binding Categories}" Style="{StaticResource {x:Type TreeView}}">
+            <TreeView.Resources>
+                <!-- HierarchicalDataTemplate for Category -->
+                <HierarchicalDataTemplate DataType="{x:Type local:Category}" ItemsSource="{Binding Items}">
+                    <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                </HierarchicalDataTemplate>
+
+                <!-- HierarchicalDataTemplate for Item -->
+                <HierarchicalDataTemplate DataType="{x:Type local:Item}" ItemsSource="{x:Null}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                        <TextBlock Text=" - " />
+                        <TextBlock Text="{Binding Price, StringFormat={}{0:C}}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>
